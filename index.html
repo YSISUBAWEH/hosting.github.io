@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>/weh--/</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <h2  style="font-family: arial;margin-top:20%;margin-bottom:100px;">WEH HOSTING</h2>
+      <div class="wrapper">
+         <div class="button" style="margin-bottom:100px;">
+            <div class="icon">
+               <i class="fa-solid fa-1" style="color: red;">1</i>
+            </div>
+            <span><a href="tugas1" style="text-decoration: none;">Tugas-1</a></span>
+         </div>
+         <div class="button">
+            <div class="icon">
+               <i class="fa-solid fa-2" style="color: blue;">2</i>
+            </div>
+            <span><a href="tugas-2" style="text-decoration: none;">Tugas-2</a></span>
+         </div>
+         <div class="button">
+            <div class="icon">
+               <i class="fa-solid fa-3" style="color: orange;">3</i>
+            </div>
+            <span><a href="tugas3" style="text-decoration: none;">Tugas-3</a></span>
+         </div>
+      <!--   <div class="button">-->
+      <!--      <div class="icon">-->
+      <!--         <i class="fa-solid fa-4" style="color: brown;">4</i>   -->
+      <!--      </div>-->
+      <!--      <span><a href="">Tugas-4</a></span>-->
+      <!--   </div>-->
+      <!--   <div class="button">-->
+      <!--      <div class="icon">-->
+      <!--         <i class="fa-solid fa-
+      5" style="color: cyan;">5</i>-->
+      <!--      </div>-->
+      <!--      <span><a href="">Tugas-5</a></span>-->
+      <!--   </div>-->
+      </div>
+      <button onclick="myFunction()" class="bt" style="background: #FF99FF; color: black; font-size: 10px; padding: 0.5em 1em 0.5em 1em; float: right;margin-bottom:400px; border-radius: 10px;"><strong>Change Themes</strong></button>
+         <script type="text/javascript">function myFunction(){
+               var element = document.body;
+               element.classList.toggle("dark-mode");}
+         const buttons = document.querySelectorAll("a");
+         buttons.forEach((button) => {
+           button.onclick = function(e){
+             let x = e.clientX - e.target.offsetLeft;
+             let y = e.clientY - e.target.offsetTop;
+             let ripple = document.createElement("span");
+             ripple.style.left = `${x}px`;
+             ripple.style.top = `${y}px`;
+             this.appendChild(ripple);
+             setTimeout(function(){
+               ripple.remove();
+             }, 600); // 1second = 1000ms
+           }
+         });
+         </script>
+   </body>
+</html>
